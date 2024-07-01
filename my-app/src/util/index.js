@@ -6,3 +6,5 @@ const calcMovieRating = (reviews) => {
         rating += review.rating;
     });
     return rating / reviews.length.toFixed(2);
+};
+export {calcMovieRating}
