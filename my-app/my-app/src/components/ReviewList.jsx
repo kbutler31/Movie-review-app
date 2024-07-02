@@ -3,12 +3,12 @@ import Review from "./Review";
 
 const ReviewList = ({ reviews }) => {
     return (
-        <Fieldset classname = "reviewContainer">
+        <div classname = "reviewContainer">
             <legend>Reviews</legend>
             {reviews.map((review) => (
                 <Review key={review.id} review={review} />
             ))}
-        </Fieldset>
+        </div>
     );
 };
 export default ReviewList
