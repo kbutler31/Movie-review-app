@@ -7,4 +7,5 @@ const calcMovieRating = (reviews) => {
     });
     return rating / reviews.length.toFixed(2);
 };
-export {calcMovieRating}
+
+export default calcMovieRating

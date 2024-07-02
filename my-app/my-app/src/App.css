@@ -36,3 +36,93 @@
     transform: rotate(360deg);
   }
 }
+
+.category ul {
+  list-style-type: none;
+  padding: 20px 5px 0px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.starRating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.starRating input {
+  display: none;
+}
+.starRating label {
+  color: grey;
+  cursor: pointer;
+}
+.starRating :checked ~ label {
+  color: orange;
+}
+.starRating label:hover,
+.starRating label:hover ~ label {
+  color: orange;
+}
+.reviewForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reviewFormcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+legend {
+  text-align: center;
+  font-weight: bold;
+  
+}
+fieldset label {flex-direction: column; display: flex; gap: 10px; align-items: center; justify-content: center;}
+.reviewUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reviewContainer {  display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;}
+
+aside{
+  display: flex;
+justify-content: space-between;}
+.catagories {disply:flex;}
+
+.catagories h3 {margin:0 0 10px 0;}
+
+p{margin: 0;}
+
+article{
+  border-radius: 5px;
+  padding: 10px;
+  color: blue;
+  margin-bottom: 15px;
+}
+
+img.thumbnail {
+  height:200px;
+  width:400px
+}
+
+article>header {
+  gap: 10px;
+  display: flex;
+  width: 850px;
+  background-color: aquamarine;
+}
+
+section {
+  width: 900px;
+}
+
+.container {margin: auto;
+  width: 850px;
+  justify-content: center;
+
+}

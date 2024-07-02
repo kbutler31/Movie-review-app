@@ -5,7 +5,9 @@ const Header = () => (
 
     return(
         <header>
-            <h1>Rate That Tom Hanks Movie</h1>
+            <h1>Rate These Tom Hanks Movie</h1>
         </header>
     )
-)
+);
+
+export default Header

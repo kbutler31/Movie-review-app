@@ -1,3 +1,4 @@
+import React from "react";
 import {calcMovieRating} from "../util"
 import ReviewForm from "./ReviewForm";
 import ReviewList from "./ReviewList";
