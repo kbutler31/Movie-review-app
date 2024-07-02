@@ -9,3 +9,6 @@ const ReviewList = ({ reviews }) => {
                 <Review key={review.id} review={review} />
             ))}
         </Fieldset>
+    );
+};
+export default ReviewList

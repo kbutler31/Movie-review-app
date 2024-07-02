@@ -36,7 +36,7 @@ const ReviewForm = ({movieID, addReview}) => {
         <>
         <Fieldset className="reviewFormContainer">
             <legend>Leave a Review</legend>
-            < onSubmit={submitHandler}>
+            <form onSubmit={submitHandler}>
                 <label htmlFor="user">Name</label>
                 <input
                     type="text"
@@ -53,8 +53,10 @@ const ReviewForm = ({movieID, addReview}) => {
                     />
             <input type="submit" value="Submit Review" />
             </form>
-            </Fieldset>
+        </Fieldset>
+        
         </>
-    );}
+    );
+}
 
 export default ReviewForm;
