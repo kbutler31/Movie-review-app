@@ -1,14 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+
+import Header from './components/Header';
 import ReviewList from './components/ReviewList';
 
 function App() {
+
+let reviewsData = [
+  {
+    id: 1,
+    review: "review data here"
+  },
+  {
+    id: 2,
+    review: "more review data here"
+  }
+]
+
   return (
     <div className="App">
+<Header />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          123Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -19,6 +35,9 @@ function App() {
           Learn React
         </a>
       </header>
+
+{/* Outputs the review list component */}
+      <ReviewList reviews={reviewsData} />
     </div>
   );
 }

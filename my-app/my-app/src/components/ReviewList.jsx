@@ -2,12 +2,18 @@ import React from "react";
 import Review from "./Review";
 
 const ReviewList = ({ reviews }) => {
+console.log("ReviewList:", reviews);
+
     return (
-        <div classname = "reviewContainer">
+        <div className = "reviewContainer">
             <legend>Reviews</legend>
-            {reviews.map((review) => (
+            {reviews.map((review) => {
+                console.log("jsx map review:", review);
+                return (
                 <Review key={review.id} review={review} />
-            ))}
+            )
+        }
+        )}
         </div>
     );
 };

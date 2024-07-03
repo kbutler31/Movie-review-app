@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = () => (
+const Header = () => {
 
 
     return(
@@ -8,6 +8,6 @@ const Header = () => (
             <h1>Rate These Tom Hanks Movie</h1>
         </header>
     )
-);
+};
 
 export default Header
