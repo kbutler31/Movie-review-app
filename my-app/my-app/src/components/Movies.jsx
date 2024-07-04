@@ -1,32 +1,34 @@
 import React from "react";
-import {calcMovieRating} from "../util"
+import { calcMovieRating } from "../util";
 import ReviewForm from "./ReviewForm";
 import ReviewList from "./ReviewList";
 
-const Movies = ({movies, review}) => {
+const Movie = ({ movie, review }) => {
+  const categoryList = movie.category.map((category, index) => (
+    <li key={index}>{category}</li>
+  ));
 
-    const categoryList = movie.category.map((category,index) => <li key={index}>{category}</li>);
+  const rating = calcMovieRating(movie.reviews);
+  return (
+    <article key={movie.id}>
+      <h3>{movie.title} - {movie.year}</h3>
+      <header>
+        <img className="thumbnail" src={movie.imagSrc} alt={movie.title} />
+        <div className="details">
+          <p>{movie.Synopsis}</p>
+          <h4>Rating</h4>
+          <div className="categories">
+            <h4>Categories</h4>
+            <ul>{categoryList}</ul>
+          </div>
+        </div>
+      </header>
+      <aside>
+        <ReviewList reviews={movie.reviews} />
+        <ReviewForm movieID={movie.id} addReview={addReview} />
+console.log("addReview:", addReview);
 
-    const rating = calcMovieRating(movies.reviews);
-        return (
-            <article key={movies.id}>
-                <h3>{movies.title} - {movies.year}</h3>
-                <header>
-                    <img className = thumbnail src={movies.imagSrc} alt={movies.title} />
-                    <div className="details">
-                        <p>{movies.Synopsis}</p>
-                        <h4>Rating</h4>
-                        <div className = "categories">
-                            <h4>Categories</h4>
-                            <ul>{categoryList}
-                    </div>
-                </header>
-                <aside>
-                    <Reviewlist reviews={movies.reviews} />
-                    <ReviewForm movieID = {movies.id} addReview = {addReview} />
-                </aside>
-            </article>
-    );
+      </aside>
+    </article>
+  );
 };
-
-export default Movies;

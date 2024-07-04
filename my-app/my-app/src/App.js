@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-
+// import Stores.js from './assets/'
 import Header from './components/Header';
 import ReviewList from './components/ReviewList';
+import ReviewForm from './components/ReviewForm';
+import Movies from './components/Movies';
 
 function App() {
 
@@ -37,6 +39,8 @@ let reviewsData = [
       </header>
 
 {/* Outputs the review list component */}
+      <Movies/>
+      <ReviewForm />
       <ReviewList reviews={reviewsData} />
     </div>
   );
